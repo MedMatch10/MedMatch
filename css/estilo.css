@@ -1,0 +1,332 @@
+/* #region Variables */
+:root {
+    --dark-midnight: #313131;
+    --light-midnight: #414042;
+
+    --light-green: #00e093;
+    --dark-green: #0cbf7d;
+
+    --current-blue: #0A379E;
+
+    --top-background:#0d369e;
+
+    --error-color:#0d369e;
+}
+/*#endregion */
+
+/* #region Common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat';
+    font-size: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;;
+}
+/*#endregion */
+
+/*#region Buttons */
+.button {
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 0.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.green-button {
+    background-color: white;
+    border-color: var(--dark-green);
+    color: var(--dark-green);
+}
+
+.green-button:hover {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    color: white;
+}
+
+.green-button:active {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    color: white;
+}
+
+.midnight-button {
+    background-color: white;
+    border-color: var(--dark-midnight);
+    color: var(--dark-midnight);
+    width: 70%; /* Set a fixed width for the buttons */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    padding: 1rem 3.5rem; /* Adjust padding as needed */
+}
+
+.midnight-button:hover {
+    background-color: var(--light-midnight);
+    border-color: var(--light-midnight);
+    color: white;
+}
+
+.midnight-button:active {
+    background-color: var(--dark-midnight);
+    border-color: var(--dark-midnight);
+    color: white;
+}
+/*#endregion */
+
+/*#region N-bar */
+#navi-bar {
+    background-color: var(--top-background);
+    display: flex;
+    align-items: center;
+    height: 10rem;
+}
+#green-bar {
+    background-color: #2ED313;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+
+.logo {
+    width: 400px;
+    margin-left: 10%;
+}
+
+#top-button {
+    position: absolute;
+    right: 15%;
+}
+
+#links {
+    position: absolute;
+    left: 40%;
+}
+
+#links a {
+    margin-right: 2rem;
+}
+
+.b {
+    margin-right: 2rem;
+    position: absolute;
+    left: 40%;
+}
+/* #endregion */
+
+/*#region Content */
+#grid-container {
+    /* margin-top: 0rem; */
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12rem;
+}
+
+.text > * {
+    font-size: 3rem;
+    font-weight: 120;
+}
+
+#title {
+    color: var(--error-color);
+    font-weight: 750;
+}
+
+
+#cell-1 {
+    margin-left: 15%; /* Adjust the margin to move the image further to the right */
+}
+
+#error {
+    width: 50rem;
+}
+
+#cell-2 {
+    margin-top: 3.8rem;
+    margin-right: 27%; /* Adjust the margin to move the image further to the right */
+}
+
+#cell-3 {
+    margin-top: .7rem; /* Adjust the margin to move the image down */
+    margin-left: 10%; /* Adjust the margin to move the image further to the right */
+    
+}
+
+.cell-container {
+    position: relative; /* Permite posicionamento absoluto para a imagem */
+  }
+  
+  .logo-pequeno {
+    position: absolute; /* Posiciona a imagem sobreposta ao conteúdo */
+    top: 0; /* Alinha a imagem ao topo do container */
+    left: 0; /* Alinha a imagem à esquerda do container */
+    width: 50px; /* Define a largura da imagem */
+    height: 50px; /* Define a altura da imagem */
+  }
+  
+  .dados-medico {
+    padding: 40px; /* Adiciona espaçamento interno ao container */
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo semi-transparente */
+  }
+  .texto-medico {
+    margin-left: 10px; /* Adjust the value for desired left margin */
+  }
+  
+  .cell-container p {
+    margin-bottom: 10px;
+  }
+  
+  .spacer {
+    margin-bottom: 20px; /* Adjust as needed for spacing between paragraphs */
+  }
+
+  .logo-small {
+    width: 30px; /* ajuste conforme necessário */
+    position: relative;
+    z-index: -1; /* faz com que a imagem fique atrás */
+    margin-right: 10px; /* ajuste conforme necessário */
+}
+
+#cell-4 {
+    margin-right: 40%;
+    display: flex;
+    justify-content: center; /* Adjust as needed */
+    align-items: center;
+    
+}
+
+#cell-4 > * {
+    margin-right: 1.5rem;
+    float: left;
+    height: 2rem;
+    width: 2rem;
+}
+/*#endregion*/
+
+/*#region Footer */
+#footer {
+    margin-top: auto;
+    height: 5rem;
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/*#endregion*/
+.element-spacing {
+    margin-right: 20px;
+  }
+  .element-spacing2 {
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .container {
+    white-space: nowrap;
+  }
+  .container2 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+  .paragrafo {
+margin-bottom: 20px;
+  }
+
+  .paragrafo2 {
+    margin-bottom: 150px;
+      }
+
+      .containermedico {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        background-color: #00BF7D; /* Cor de fundo alterada */
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        width: clamp(250px, 10%, 800px);
+        padding: 20px 0;
+        align-items: center;
+        border-radius: 30px;
+    }
+
+    .element-spacing input[type="submit"].search-button {
+        padding: 15px 30px; /* Ajuste o padding conforme necessário */
+        font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
+        /* Adicione outros estilos específicos para o botão "Pesquisar" aqui */
+    }
+    
+/**/
+
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .lista-medicos {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .lista-medicos li {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    
+    h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .avaliacao {
+        display: flex;
+        align-items: center;
+    }
+    
+    .estrelas {
+        font-size: 16px;
+        background-color: #ff9900;
+
+        margin-right: 5px;
+    }
+    
+    .horarios-disponiveis {
+        font-size: 14px;
+        color: #007bff;
+    }

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RESULTADO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to page CSS -->
+    <link rel="stylesheet" href="./css/estilo.css">
+   
+
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Cabeçalho -->
+<div id="navi-bar">
+    <img class="logo" src="img/assets/medmatch-logomarca-negativo-horizontal.png" alt="" id="logo">
+    <div id="links">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">Sobre</a>
+        <a href="./contato.html">Contato</a>
+        <a href="#Conta"> Acessar conta </a>
+    </div> 
+    <div class="green-button button" id="top-button">Resultado</div>
+    
+</div>
+
+<div id="green-bar"> 
+    <div id="a"> 
+        <div class="element-spacing">
+            <a> <div class="paragrafo">Filtros: </div> </a> 
+        </div>
+    </div>
+    
+    <div class="element-spacing">
+        <a> <p>Especialidade médica </p> </a>
+        <label form="doc"> </label>  
+        <select name="doc" id="doc">
+            <option value="Ortopedia ">Ortopedia </option>
+            <option value="cardiologista">cardiologista</option>
+            <option value="clínico_geral">clínico geral</option>
+            <option value="nutricionista">nutricionista</option>
+            <option value="dermatologista">dermatologista</option>
+            <option value="otorrino">otorrino</option>
+        </select>
+    </div>
+
+    <div class="element-spacing">
+        <a> <p>Selecionar cidade </p> </a>
+        <select name="cidade" id="cidade" onchange="updateBairros()">
+            <option value="São Paulo">São Paulo</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="Contagem">Contagem</option>
+        </select>
+    </div>
+   
+        <div class="element-spacing2">
+           <a> <p>Tipo de consulta</p> </a>
+            <select name="tipo_consulta" id="tipo_consulta">
+                <option value="online">Online</option>
+                <option value="presencial">Presencial</option>
+            </select>
+        </div>
+    
+        <div class="element-spacing2">
+        <a>   <p>Valor da consulta</p> </a>
+            <select name="valor_consulta" id="valor_consulta">
+                <option value="alto">Alto</option>
+                <option value="medio">Médio</option>
+                <option value="baixo">Baixo</option>
+            </select>
+        </div>
+    
+        <div class="element-spacing2">
+         <a>   <p>Data disponível</p> </a>
+            <input type="date" id="data_disponivel" name="data_disponivel">
+        </div>
+    
+        <div class="element-spacing2">
+      <a>      <p>Bairro</p> </a>
+            <select name="bairro" id="bairro">
+                <!-- Options will be dynamically added here -->
+            </select>
+        </div>
+        <input type="submit" value="Pesquisar">
+    </div>
+    
+
+<!-- Resultados Médicos -->
+<div class="paragrafo"> </div>
+<div class="paragrafo">Lista de Médicos </div>
+<div class="paragrafo">Selecione seu Médicos </div>
+
+<div class="container2">
+    <ul class="lista-medicos">
+        <li>
+            <label>
+                <input type="radio" name="medico">
+                <div class="cell-container">
+                    <img class="logo-pequeno" src="img/assets/elipse.png" alt="Imagem do médico">
+                    <div class="dados-medico">
+                        <h2 class="texto-medico">Dra. Alyk Vargas Alcobia</h2>
+                        <p class="texto-medico">Especialidade: Cardiologista</p>
+                        <p class="texto-medico">Região: São Paulo </p>
+                        <div class="avaliacao"></div>
+                    </div>
+                </div>
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="radio" name="medico">
+                <div class="cell-container">
+                    <img class="logo-pequeno" src="img/assets/elipse.png" alt="Imagem do médico">
+                    <div class="dados-medico">
+                        <h2 class="texto-medico">Dra. Joana Forja</h2>
+                        <p class="texto-medico">Especialidade: Cardiologista</p>
+                        <p class="texto-medico">Região: Rio de Janeiro</p>
+                        <div class="avaliacao"></div>
+                    </div>
+                </div>
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="radio" name="medico">
+                <div class="cell-container">
+                    <img class="logo-pequeno" src="img/assets/elipse.png" alt="Imagem do médico">
+                    <div class="dados-medico">
+                        <h2 class="texto-medico">Dr. Alam Jorge</h2>
+                        <p class="texto-medico">Especialidade: Cardiologista</p>
+                        <p class="texto-medico">Região: Minas Gerais</p>
+                        <div class="avaliacao"></div>
+                    </div>
+                </div>
+            </label>
+        </li>
+    </ul>
+</div>
+
+<a> <div class="paragrafo">Filtros: </div> </a>
+
+
+<div class="element-spacing">
+    <form action="index.html" method="GET">
+        <!-- Assuming you're using a form element to wrap the input -->
+        <input type="submit" value="Pesquisar" class="search-button">
+    </form>
+</div>
+        <a> <div class="paragrafo">Filtros: </div> </a>
+    </div>
+
+
+
+<!-- Rodapé -->
+<div id="footer">
+<div id="cell-4">
+<img src="img/assets/icones social/icones-social-01.svg" alt="">
+<img src="img/assets/icones social/icones-social-02.svg" alt="">
+<img src="img/assets/icones social/icones-social-03.svg" alt="">
+<img src="img/assets/icones social/icones-social-04.svg" alt="">
+<img src="img/assets/icones social/icones-social-05.svg" alt="">
+</div>
+
+    Copyright © 2024 MedMatch | Direitos reservados
+</div>
+
+
+
+<!-- JS para quando o usúario selecionar a cidade, os bairros vão aparecer respectivamente  -->
+<script>
+    function updateBairros() {
+        var cidadeSelect = document.getElementById("cidade");
+        var bairroSelect = document.getElementById("bairro");
+
+        // Limpar as opções atuais
+        bairroSelect.innerHTML = "";
+
+        // Cidades e seus respectivos bairros
+        var cidadesBairros = {
+            "São Paulo": ["Socorro", "Ademar", "Campo Limpo"],
+            "Rio de Janeiro": ["Copacabana", "Méier", "Leblon"],
+            "Contagem": ["Nova Contagem", "Eldorado", "Bandeirantes"]
+        };
+
+        // Adicionar as opções de bairros da cidade selecionada
+        var cidadeSelecionada = cidadeSelect.value;
+        cidadesBairros[cidadeSelecionada].forEach(function(bairro) {
+            var option = document.createElement("option");
+            option.text = bairro;
+            option.value = bairro;
+            bairroSelect.appendChild(option);
+        });
+    }
+
+    // Atualizar os bairros assim que a página carregar
+    window.onload = updateBairros;
+</script>
+
+</body>
+</html>

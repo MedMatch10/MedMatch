@@ -36,7 +36,7 @@ a {
     font-weight: 700;;
 }
 /*#endregion */
-a .highlighted{
+a.highlighted{
     background:#00BF7D;
     color: #fff;
 }

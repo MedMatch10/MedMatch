@@ -32,7 +32,9 @@ p {
 a {
   text-decoration: none;
 }
-
+strong{
+  font-size: 1em;
+}
 input, button, select, textarea {
   border: none;
   outline: none;

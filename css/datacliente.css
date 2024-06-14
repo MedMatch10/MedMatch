@@ -1,0 +1,191 @@
+/* #region Variables */
+:root {
+    --dark-midnight: #313131;
+    --light-midnight: #414042;
+
+    --light-green: #00e093;
+    --dark-green: #0cbf7d;
+
+    --current-blue: #0A379E;
+
+    --top-background:#0d369e;
+
+    --error-color:#0d369e;
+}
+/*#endregion */
+
+/* #region Common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat';
+    font-size: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;;
+}
+/*#endregion */
+
+/*#region Buttons */
+.button {
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 0.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.green-button {
+    background-color: white;
+    border-color: var(--dark-green);
+    color: var(--dark-green);
+}
+
+.green-button:hover {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    color: white;
+}
+
+.green-button:active {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    color: white;
+}
+
+.midnight-button {
+    background-color: white;
+    border-color: var(--dark-midnight);
+    color: var(--dark-midnight);
+    width: 70%; /* Set a fixed width for the buttons */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    padding: 1rem 3.5rem; /* Adjust padding as needed */
+}
+
+.midnight-button:hover {
+    background-color: var(--light-midnight);
+    border-color: var(--light-midnight);
+    color: white;
+}
+
+.midnight-button:active {
+    background-color: var(--dark-midnight);
+    border-color: var(--dark-midnight);
+    color: white;
+}
+/*#endregion */
+
+/*#region Navi-bar */
+#navi-bar {
+    background-color: var(--top-background);
+    display: flex;
+    align-items: center;
+    height: 10rem;
+}
+
+.logo {
+    width: 400px;
+    margin-left: 10%;
+}
+
+#top-button {
+    position: absolute;
+    right: 15%;
+}
+
+#links {
+    position: absolute;
+    left: 52%;
+}
+
+#links a {
+    margin-right: 2rem;
+}
+/* #endregion */
+
+/*#region Content */
+#grid-container {
+    /* margin-top: 0rem; */
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12rem;
+}
+
+.text > * {
+    font-size: 3rem;
+    font-weight: 120;
+}
+
+#title {
+    color: var(--error-color);
+    font-weight: 750;
+}
+
+#cell-1 {
+    margin-left: 15%; /* Adjust the margin to move the image further to the right */
+}
+
+#error {
+    width: 50rem;
+}
+
+#cell-2 {
+    margin-top: 3.8rem;
+    margin-right: 27%; /* Adjust the margin to move the image further to the right */
+}
+
+#cell-3 {
+    margin-top: .7rem; /* Adjust the margin to move the image down */
+    margin-left: 10%; /* Adjust the margin to move the image further to the right */
+    
+}
+
+#cell-4 {
+    margin-right: 40%;
+    display: flex;
+    justify-content: center; /* Adjust as needed */
+    align-items: center;
+    
+}
+
+#cell-4 > * {
+    margin-right: 1.5rem;
+    float: left;
+    height: 2rem;
+    width: 2rem;
+}
+/*#endregion*/
+
+/*#region Footer */
+#footer {
+    margin-top: auto;
+    height: 5rem;
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/*#endregion*/

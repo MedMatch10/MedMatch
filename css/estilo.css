@@ -39,8 +39,8 @@ a {
 a.highlighted{
     background:#00BF7D;
     color: #fff;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 8px;
+    border-radius: 8px;
 }
 /*#region Buttons */
 .button {
